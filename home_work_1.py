@@ -107,7 +107,7 @@
 #     else:
 #         print(f"Решение уравнения x = {x} не попадает в указанный отрезок [{m},{n}]")
 
-# #Задача 5.
+# #Задача 6
 # # Запрашиваем у пользователя скорость и время
 # v = float(input("Введите скорость (в км/ч): "))
 # t = float(input("Введите время (в часах): "))
@@ -122,6 +122,7 @@
 # print(f"Спортсмен проедет {distance:.2f} км и остановится на километре: {int(position)}")
 
 
+# #Задача 7
 # # Функция для вычисления суммы и произведения цифр числа
 # def sum_and_product_of_digits(number):
 #     digits = [int(d) for d in str(number)]  # Извлекаем цифры числа
@@ -130,17 +131,53 @@
 #     for d in digits:
 #         total_product *= d  # Считаем произведение цифр
 #     return total_sum, total_product
+#
+# # Запрашиваем двузначное число
+# two_digit_number = int(input("Введите двузначное число: "))
+# # Запрашиваем трехзначное число
+# three_digit_number = int(input("Введите трехзначное число: "))
+#
+# # Вычисляем сумму и произведение цифр для двузначного числа
+# sum_two, product_two = sum_and_product_of_digits(two_digit_number)
+# print(f"Для двузначного числа {two_digit_number}: Сумма = {sum_two}, Произведение = {product_two}")
+#
+# # Вычисляем сумму и произведение цифр для трехзначного числа
+# sum_three, product_three = sum_and_product_of_digits(three_digit_number)
+# print(f"Для трехзначного числа {three_digit_number}: Сумма = {sum_three}, Произведение = {product_three}")
 
 
-# Запрашиваем двузначное число
-two_digit_number = int(input("Введите двузначное число: "))
-# Запрашиваем трехзначное число
-three_digit_number = int(input("Введите трехзначное число: "))
+# #Задача 8
+# # Запрашиваем у пользователя три целых числа
+# num1 = int(input("Введите первое число: "))
+# num2 = int(input("Введите второе число: "))
+# num3 = int(input("Введите третье число: "))
+#
+# # Находим минимальное и максимальное значение
+# min_num = min(num1, num2, num3)
+# max_num = max(num1, num2, num3)
+#
+# # Находим среднее число
+# sum_of_numbers = num1 + num2 + num3
+# middle_num = sum_of_numbers - min_num - max_num
+#
+# # Выводим числа в упорядоченном виде по возрастанию
+# print(f"Числа в порядке возрастания: {min_num}, {middle_num}, {max_num}")
 
-# Вычисляем сумму и произведение цифр для двузначного числа
-sum_two, product_two = sum_and_product_of_digits(two_digit_number)
-print(f"Для двузначного числа {two_digit_number}: Сумма = {sum_two}, Произведение = {product_two}")
 
-# Вычисляем сумму и произведение цифр для трехзначного числа
-sum_three, product_three = sum_and_product_of_digits(three_digit_number)
-print(f"Для трехзначного числа {three_digit_number}: Сумма = {sum_three}, Произведение = {product_three}")
+# #Задача 9. Поменять местами: не всё так просто!
+# a = int(input('Введите первое число: '))
+# b = int(input('Введите второе число: '))
+# a = a + b
+# b = a - b
+# a = a - b
+# print(a, b)
+
+
+# #Задача 10.
+# team = input('Введите название футбольной команды: ')
+# print(f'{team} - чемпион!')
+# print('-' * len(team))
+# team_lower = team.lower()
+# print(f'Длина наименования команды: {len(team)}')
+# print(f'Есть ли в наименовании команды буква "п"? {"п" in team_lower}')
+# print(f'Сколько раз повторяется буква "а"? {team_lower.count("а")}')
